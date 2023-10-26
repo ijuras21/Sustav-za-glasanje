@@ -141,6 +141,7 @@
             this.VoteBtn.TabIndex = 11;
             this.VoteBtn.Text = "Vote";
             this.VoteBtn.UseVisualStyleBackColor = true;
+            this.VoteBtn.Click += new System.EventHandler(this.VoteBtn_Click);
             // 
             // Form1
             // 
@@ -165,6 +166,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Voting";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
