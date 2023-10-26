@@ -24,15 +24,19 @@ namespace Glasanje {
         }
 
         private void VoteBtn_Click(object sender, EventArgs e) {
-            if(GlasanjeComboBox.SelectedIndex == 0) {
-                For1++;
-               ForLabel.Text=For1.ToString();
-            } else if(GlasanjeComboBox.SelectedIndex == 1) {
-                Against1++;
-                AgainstLabel.Text= Against1.ToString();
-            } else if(GlasanjeComboBox.SelectedIndex == 2) {
-                Abstained1++;
-                AbstainedLabel.Text= Abstained1.ToString();
+            if (OIBTextBox.Text == "") {
+                MessageBox.Show("OIB nije unesen!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else { 
+                if (GlasanjeComboBox.SelectedIndex == 0) {
+                    For1++;
+                    ForLabel.Text=For1.ToString();
+                } else if(GlasanjeComboBox.SelectedIndex == 1) {
+                    Against1++;
+                    AgainstLabel.Text= Against1.ToString();
+                } else if(GlasanjeComboBox.SelectedIndex == 2) {
+                    Abstained1++;
+                    AbstainedLabel.Text= Abstained1.ToString();
+                }
             }
         }
     }
